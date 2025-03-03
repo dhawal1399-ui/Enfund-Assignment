@@ -10,7 +10,12 @@ SECRET_KEY = 'django-insecure-d=zn_)xtuaxrj)@5rvaoui*78$o5!xnpmf=^(%27lid#-6&vb!
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    "enfund-assignment-production.up.railway.app",  # Add your production domain
+]
+
 
 INSTALLED_APPS = [
     'daphne',
@@ -58,10 +63,6 @@ TEMPLATES = [
             ],
         },
     },
-]
-
-CSRF_TRUSTED_ORIGINS = [
-    "https://enfund-assignment-production.up.railway.app",  # Add your domain
 ]
 
 WSGI_APPLICATION = 'myAssignment.wsgi.application'
@@ -163,3 +164,7 @@ CHANNEL_LAYERS = {
         "BACKEND": "channels.layers.InMemoryChannelLayer"
     }
 }
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://enfund-assignment-production.up.railway.app",  # Add your domain
+]
