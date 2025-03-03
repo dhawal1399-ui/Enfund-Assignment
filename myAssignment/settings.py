@@ -60,6 +60,10 @@ TEMPLATES = [
     },
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://enfund-assignment-production.up.railway.app",  # Add your domain
+]
+
 WSGI_APPLICATION = 'myAssignment.wsgi.application'
 ASGI_APPLICATION = "myAssignment.asgi.application"
 
