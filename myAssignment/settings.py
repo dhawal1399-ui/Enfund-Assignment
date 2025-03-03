@@ -3,7 +3,8 @@ import dj_database_url
 import os
 from decouple import config
 
-BASE_DIR = Path(__file__).resolve().parent.parent
+# Ensure BASE_DIR is correctly defined
+BASE_DIR = Path(__file__).resolve().parent.parent  
 
 SECRET_KEY = 'django-insecure-d=zn_)xtuaxrj)@5rvaoui*78$o5!xnpmf=^(%27lid#-6&vb!'
 
@@ -64,8 +65,8 @@ ASGI_APPLICATION = "myAssignment.asgi.application"
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3',  # Ensure ENGINE is correctly set
+        'NAME': BASE_DIR / "db.sqlite3",  # SQLite database file
     }
 }
 
