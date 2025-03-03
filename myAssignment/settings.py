@@ -143,7 +143,7 @@ SOCIALACCOUNT_PROVIDERS = {
             'openid',
         ],
         'AUTH_PARAMS': {
-            'access_type': 'offline'
+            'access_type': 'online'
         },
         'OAUTH_PKCE_ENABLED': True,
         'APP': {
