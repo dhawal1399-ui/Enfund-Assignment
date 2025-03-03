@@ -73,6 +73,7 @@
         <h2>Login with Google</h2>
         <!-- This will automatically render the Google login button -->
         <a href="{% provider_login_url 'google' %}">
+            {% csrf_token %} 
             <button class="google-btn">
                 <img src="{% static 'images/google-icon.png' %}" alt="Google Icon"> Login with Google
             </button>
