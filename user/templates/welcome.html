@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Welcome{% endblock %}
+
+{% block content %}
+<div class="welcome-container">
+    <div class="welcome-card">
+        <h1>Welcome to Our Website!</h1>
+        <p>Explore our amazing features and enjoy your time.</p>
+        {% if user.is_authenticated %}
+        <a href="{% url 'upload_to_drive' %}" class="btn">Upload to Drive</a>
+        <a href="{% url 'chatingPage' %}" class="btn">Chat</a>
+        {% else %}
+        <!-- <a href="http://127.0.0.1:2025/upload_to_drive/" class="btn">Login</a> -->
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

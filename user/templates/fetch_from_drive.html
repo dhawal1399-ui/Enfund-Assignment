@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Your Google Drive Files{% endblock %}
+
+{% block content %}
+<div class="file-list-container">
+    <h2>Your Google Drive Files</h2>
+    {% if message %}
+        <p>{{ message }}</p>
+    {% else %}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>File Name</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for file in files %}
+                    <tr>
+                        <td>{{ file.name }}</td>
+                        <td>
+                            <a href="{% url 'download_from_drive' file.id %}" class="btn btn-primary">Download</a>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% endif %}
+</div>
+{% endblock %}
