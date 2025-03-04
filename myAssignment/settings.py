@@ -139,7 +139,7 @@ ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME_REQUIRED = False
 SOCIALACCOUNT_STORE_TOKENS = True
 
-SERVICE_ACCOUNT_FILE = os.path.join(BASE_DIR, "myAssignment/config", "google_credentials.json")
+SERVICE_ACCOUNT_FILE = os.path.join(BASE_DIR, "user/config", "google_credentials.json")
 
 
 SOCIALACCOUNT_PROVIDERS = {
