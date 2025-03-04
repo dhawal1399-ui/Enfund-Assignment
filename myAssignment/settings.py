@@ -11,9 +11,9 @@ SECRET_KEY = 'django-insecure-d=zn_)xtuaxrj)@5rvaoui*78$o5!xnpmf=^(%27lid#-6&vb!
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1',"enfund-assignment-production.up.railway.app"]
+SECURE_SSL_REDIRECT = True
 
 # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-# SECURE_SSL_REDIRECT = True
 # SITE_URL = "https://enfund-assignment-production.up.railway.app"
 # ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
 
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    # "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -102,7 +102,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Apply WhiteNoise settings
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'staticfiles'),
@@ -128,7 +128,6 @@ AUTHENTICATION_BACKENDS = (
 SITE_ID = 1
 
 LOGIN_REDIRECT_URL = "https://enfund-assignment-production.up.railway.app/upload_to_drive/"
-# LOGIN_REDIRECT_URL = "http://127.0.0.1:2025/accounts/google/login/callback/"
 LOGOUT_REDIRECT_URL = "https://enfund-assignment-production.up.railway.app/"
 
 GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')

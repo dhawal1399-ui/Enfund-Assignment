@@ -116,6 +116,7 @@ def logoutPage(request):
     return redirect("welcome")
 
 def upload_to_drive(request):
+    print('auth:', request.user.is_authenticated)
     if request.method == "POST" and 'file' in request.FILES:
         file = request.FILES['file']
         
