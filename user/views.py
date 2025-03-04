@@ -154,7 +154,7 @@ import os
 import pickle
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-CREDENTIALS_PATH = os.path.join(BASE_DIR, 'config', 'google_credentials.json')
+CREDENTIALS_PATH = os.path.join(BASE_DIR, 'user/config', 'google_credentials.json')
 
 SCOPES = ['https://www.googleapis.com/auth/drive']
 
