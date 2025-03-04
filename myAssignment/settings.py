@@ -8,7 +8,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-d=zn_)xtuaxrj)@5rvaoui*78$o5!xnpmf=^(%27lid#-6&vb!'
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["enfund-assignment-production.up.railway.app"]
 
