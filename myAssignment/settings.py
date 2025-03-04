@@ -10,7 +10,7 @@ SECRET_KEY = 'django-insecure-d=zn_)xtuaxrj)@5rvaoui*78$o5!xnpmf=^(%27lid#-6&vb!
 
 DEBUG = False
 
-ALLOWED_HOSTS = ["enfund-assignment-production.up.railway.app"]
+ALLOWED_HOSTS = ['127.0.0.1:2025',"enfund-assignment-production.up.railway.app"]
 
 # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # SECURE_SSL_REDIRECT = True
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",  
+    # "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -69,6 +69,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'myAssignment.wsgi.application'
 ASGI_APPLICATION = "myAssignment.asgi.application"
+
 
 DATABASES = {
     'default': {
@@ -100,8 +101,8 @@ AUTH_PASSWORD_VALIDATORS = [
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
-# Apply WhiteNoise settings
-STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# # Apply WhiteNoise settings
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'staticfiles'),

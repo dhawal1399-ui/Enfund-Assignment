@@ -1,17 +1,14 @@
-/* Reset styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General Styling */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f4f8;
 }
 
-/* Navbar */
 .navbar {
     background-color: #007bff;
     padding: 15px;
@@ -41,13 +38,11 @@ body {
     font-size: 1rem;
 }
 
-/* Container */
 .container {
     text-align: center;
     margin-top: 50px;
 }
 
-/* Welcome Card */
 .welcome-container {
     display: flex;
     justify-content: center;
@@ -76,7 +71,6 @@ body {
     margin-bottom: 25px;
 }
 
-/* Buttons */
 .btn {
     display: inline-block;
     background-color: #007bff;
@@ -95,4 +89,35 @@ body {
 .btn:active {
     background-color: #003f7f;
     transform: translateY(0);
+}
+
+.chat-box {
+    max-height: 400px;
+    overflow-y: scroll;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.message {
+    padding: 8px;
+    margin: 5px;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+.sent-message {
+    background-color: #d1f7d1;
+    align-self: flex-end;
+    text-align: right;
+    margin-left: auto;
+}
+
+.received-message {
+    background-color: #f1f1f1;
+    align-self: flex-start;
+    text-align: left;
 }
