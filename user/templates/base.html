@@ -22,7 +22,8 @@
                 <li><a href="{% url 'files_from_drive' %}">Drive files</a></li>
                 <li><a href="{% url 'logout' %}">Logout</a></li>
             {% else %}
-                <li><a href="https://enfund-assignment-production.up.railway.app/accounts/login/">Login</a></li>
+                {% comment %} <li><a href="https/://enfund-assignment-production.up.railway.app/accounts/login/">Login</a></li> {% endcomment %}
+                <li><a href="http://127.0.0.1:2025/accounts/login/">Login</a></li>
             {% endif %}
         </ul>
     </nav>

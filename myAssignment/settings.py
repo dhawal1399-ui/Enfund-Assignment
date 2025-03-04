@@ -8,9 +8,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'django-insecure-d=zn_)xtuaxrj)@5rvaoui*78$o5!xnpmf=^(%27lid#-6&vb!'
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1:2025',"enfund-assignment-production.up.railway.app"]
+ALLOWED_HOSTS = ['127.0.0.1',"enfund-assignment-production.up.railway.app"]
 
 # SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # SECURE_SSL_REDIRECT = True
@@ -133,6 +133,9 @@ LOGOUT_REDIRECT_URL = "https://enfund-assignment-production.up.railway.app/"
 
 GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
 GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
+
+# GOOGLE_CLIENT_ID =""
+# GOOGLE_CLIENT_SECRET =""
 
 SOCIALACCOUNT_AUTO_SIGNUP = True
 ACCOUNT_AUTHENTICATION_METHOD = "email"
