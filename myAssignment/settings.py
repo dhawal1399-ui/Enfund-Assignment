@@ -12,10 +12,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["enfund-assignment-production.up.railway.app"]
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-SECURE_SSL_REDIRECT = True
-SITE_URL = "https://enfund-assignment-production.up.railway.app"
-ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+# SECURE_SSL_REDIRECT = True
+# SITE_URL = "https://enfund-assignment-production.up.railway.app"
+# ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
 
 
 
