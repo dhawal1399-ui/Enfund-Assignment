@@ -1,7 +1,7 @@
 from pathlib import Path
-import dj_database_url
+# import dj_database_url
 import os
-from decouple import config
+# from decouple import config
 
 # Ensure BASE_DIR is correctly defined
 BASE_DIR = Path(__file__).resolve().parent.parent  
@@ -10,11 +10,13 @@ SECRET_KEY = 'django-insecure-d=zn_)xtuaxrj)@5rvaoui*78$o5!xnpmf=^(%27lid#-6&vb!
 
 DEBUG = True
 
-ALLOWED_HOSTS = [
-    "127.0.0.1",
-    "localhost",
-    "enfund-assignment-production.up.railway.app",  # Add your production domain
-]
+ALLOWED_HOSTS = ["enfund-assignment-production.up.railway.app"]
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SECURE_SSL_REDIRECT = True
+SITE_URL = "https://enfund-assignment-production.up.railway.app"
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
+
 
 
 INSTALLED_APPS = [
